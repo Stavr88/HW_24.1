@@ -12,10 +12,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 
-SECRET_KEY = os.getenv("SECRET_KEY")
+# SECRET_KEY = os.getenv("SECRET_KEY")
+SECRET_KEY = "django-insecure-tf8_r$nrh_tdk!71$mxe^5s)2sfak(+h*y^=blva10(3a^d$l*"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.getenv("DEBUG", False) == "True"
+# DEBUG = os.getenv("DEBUG", False) == "True"
+DEBUG = True
 
 ALLOWED_HOSTS = []
 
@@ -72,11 +74,16 @@ WSGI_APPLICATION = "config.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql_psycopg2",
-        "NAME": os.getenv("NAME"),
-        "USER": os.getenv("USER"),
-        "PASSWORD": os.getenv("PASSWORD"),
-        "HOST": os.getenv("HOST"),
-        "PORT": os.getenv("PORT"),
+        # "NAME": os.getenv("NAME"),
+        # "USER": os.getenv("USER"),
+        # "PASSWORD": os.getenv("PASSWORD"),
+        # "HOST": os.getenv("HOST"),
+        # "PORT": os.getenv("PORT"),
+        "NAME": "HW24.1",
+        "USER": "postgres",
+        "PASSWORD": "201023",
+        "HOST": "127.0.0.1",
+        "PORT": "5432",
     }
 }
 

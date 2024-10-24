@@ -54,7 +54,7 @@ class Lesson(models.Model):
         on_delete=models.SET_NULL,
         blank=True,
         null=True,
-        related_name='course'
+        related_name='lesson_set'
     )
     video_url = models.URLField(
         verbose_name="Ссылка на урок",

@@ -1,10 +1,12 @@
 from django.contrib.auth.models import AbstractUser
 from django.db import models
 
+from materials.models import Course, Lesson
+
 
 class User(AbstractUser):
     username = None
-    email = models.EmailField(unique=True, verbose_name="Почта", help_text="Укажите почту",)
+    email = models.EmailField(unique=True, verbose_name="Почта", help_text="Укажите почту", )
     phone = models.CharField(
         max_length=50,
         verbose_name="Телефон",
@@ -39,3 +41,57 @@ class User(AbstractUser):
 
     def __str__(self):
         return self.email
+
+
+class Payments(models.Model):
+    CASH = "cash"
+    NON_CASH = "non_cash"
+    PAYMENT_OPTIONS = (
+        (CASH, 'Наличный'),
+        (NON_CASH, 'Безналичный')
+    )
+    user = models.ForeignKey(
+        User,
+        on_delete=models.SET_NULL,
+        blank=True,
+        null=True,
+        related_name='user'
+    )
+    payment_time = models.DateTimeField(
+        verbose_name="Дата оплаты",
+        help_text="Введите дату",
+        auto_now_add=True,
+        blank=True,
+        null=True,
+    )
+    payment_course = models.ForeignKey(
+        Course,
+        on_delete=models.CASCADE,
+        blank=True,
+        null=True,
+        verbose_name="Оплаченный курс"
+    )
+    payment_lesson = models.ForeignKey(
+        Lesson,
+        on_delete=models.CASCADE,
+        blank=True,
+        null=True,
+        verbose_name="Оплаченный урок"
+    )
+    price = models.PositiveIntegerField(
+        default=0,
+        verbose_name="Стоимость покупки"
+    )
+    payment_method = models.CharField(
+        max_length=20,
+        choices=PAYMENT_OPTIONS,
+        default=CASH,
+        verbose_name='Способ оплаты'
+    )
+
+    class Meta:
+        verbose_name = "Оплата"
+        verbose_name_plural = "Оплаты"
+
+    def __str__(self):
+        return self.payment_method

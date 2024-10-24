@@ -1,0 +1,58 @@
+[
+{
+  "model": "materials.course",
+  "pk": 1,
+  "fields": {
+    "name": "металл",
+    "description": null,
+    "image": ""
+  }
+},
+{
+  "model": "materials.course",
+  "pk": 2,
+  "fields": {
+    "name": "Дерево.",
+    "description": null,
+    "image": ""
+  }
+},
+{
+  "model": "materials.course",
+  "pk": 3,
+  "fields": {
+    "name": "Вода.",
+    "description": null,
+    "image": ""
+  }
+},
+{
+  "model": "materials.course",
+  "pk": 4,
+  "fields": {
+    "name": "Вода.",
+    "description": null,
+    "image": ""
+  }
+},
+{
+  "model": "materials.course",
+  "pk": 5,
+  "fields": {
+    "name": "Вода.",
+    "description": null,
+    "image": ""
+  }
+},
+{
+  "model": "materials.lesson",
+  "pk": 1,
+  "fields": {
+    "name": "ehjr металл",
+    "description": null,
+    "image": "",
+    "course": null,
+    "video_url": null
+  }
+}
+]

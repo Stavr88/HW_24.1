@@ -24,5 +24,3 @@ class CourseSerializer(ModelSerializer):
         model = Course
         fields = ("name", "description", "image", "lesson_count", "lessons_info")
 
-
-

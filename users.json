@@ -1,0 +1,100 @@
+[
+{
+  "model": "users.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$E0X5Dj0YjliXTeOKqjcsyo$3XneiYM73isCzALdrFblM4Q4zIHkdUU4++OBzm10Yvc=",
+    "last_login": "2024-10-27T15:22:23.587Z",
+    "is_superuser": true,
+    "first_name": "",
+    "last_name": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2024-10-27T15:21:50.411Z",
+    "email": "globallife@mail.ru",
+    "phone": null,
+    "avatar": "",
+    "country": null,
+    "token": null,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": 2,
+  "fields": {
+    "password": "201023",
+    "last_login": "2024-10-27T15:24:48Z",
+    "is_superuser": false,
+    "first_name": "Стейк",
+    "last_name": "говяжий",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2024-10-27T15:24:41Z",
+    "email": "test@mail.ru",
+    "phone": "1234567",
+    "avatar": "",
+    "country": "Россия",
+    "token": null,
+    "groups": [
+      1
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": 3,
+  "fields": {
+    "password": "123",
+    "last_login": null,
+    "is_superuser": false,
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2024-10-27T16:15:02.526Z",
+    "email": "test2@mail.ru",
+    "phone": null,
+    "avatar": "",
+    "country": null,
+    "token": null,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": 4,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$vf6svCHJ5ZMc19ynVjkFq8$A+fMOX5vk488I2SuZoXSl9qZGNTJFWNBNB3DLuIHT2M=",
+    "last_login": null,
+    "is_superuser": false,
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2024-10-27T16:16:01.175Z",
+    "email": "test3@mail.ru",
+    "phone": null,
+    "avatar": "",
+    "country": null,
+    "token": null,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.payments",
+  "pk": 1,
+  "fields": {
+    "user": null,
+    "payment_time": "2024-10-26T09:28:11.528Z",
+    "payment_course": null,
+    "payment_lesson": null,
+    "price": 0,
+    "payment_method": "cash"
+  }
+}
+]

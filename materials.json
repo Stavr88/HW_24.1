@@ -60,5 +60,89 @@
     "owner": null,
     "video_url": null
   }
+},
+{
+  "model": "materials.lesson",
+  "pk": 2,
+  "fields": {
+    "name": "test1",
+    "description": null,
+    "image": "",
+    "course": null,
+    "owner": 5,
+    "video_url": "http://youtube.com"
+  }
+},
+{
+  "model": "materials.lesson",
+  "pk": 3,
+  "fields": {
+    "name": "test2",
+    "description": null,
+    "image": "",
+    "course": null,
+    "owner": 5,
+    "video_url": "http://youtube.com"
+  }
+},
+{
+  "model": "materials.lesson",
+  "pk": 4,
+  "fields": {
+    "name": "test2",
+    "description": null,
+    "image": "",
+    "course": null,
+    "owner": 5,
+    "video_url": "http://rutube.com"
+  }
+},
+{
+  "model": "materials.lesson",
+  "pk": 5,
+  "fields": {
+    "name": "test2",
+    "description": null,
+    "image": "",
+    "course": null,
+    "owner": 5,
+    "video_url": "http://rutube.com"
+  }
+},
+{
+  "model": "materials.lesson",
+  "pk": 6,
+  "fields": {
+    "name": "test2",
+    "description": null,
+    "image": "",
+    "course": null,
+    "owner": 5,
+    "video_url": "http://youtube.com"
+  }
+},
+{
+  "model": "materials.lesson",
+  "pk": 7,
+  "fields": {
+    "name": "test2",
+    "description": null,
+    "image": "",
+    "course": null,
+    "owner": 5,
+    "video_url": "http://yotube.com"
+  }
+},
+{
+  "model": "materials.lesson",
+  "pk": 8,
+  "fields": {
+    "name": "test2",
+    "description": null,
+    "image": "",
+    "course": null,
+    "owner": 5,
+    "video_url": "http://yotube.com"
+  }
 }
 ]

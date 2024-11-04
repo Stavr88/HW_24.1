@@ -1,6 +1,7 @@
 from django.db import models
 
 from config import settings
+from config.settings import AUTH_USER_MODEL
 
 
 class Course(models.Model):
@@ -23,7 +24,7 @@ class Course(models.Model):
         help_text="Загрузите фото урока",
     )
     owner = models.ForeignKey(
-        settings.AUTH_USER_MODEL,
+        AUTH_USER_MODEL,
         on_delete=models.CASCADE,
         verbose_name="Создатель курса",
         null=True,
@@ -66,7 +67,7 @@ class Lesson(models.Model):
         related_name='lesson_set'
     )
     owner = models.ForeignKey(
-        settings.AUTH_USER_MODEL,
+        AUTH_USER_MODEL,
         on_delete=models.CASCADE,
         verbose_name="Создатель урока",
         null=True,
@@ -90,7 +91,7 @@ class Lesson(models.Model):
 
 class Subscription(models.Model):
     user = models.ForeignKey(
-        settings.AUTH_USER_MODEL,
+        AUTH_USER_MODEL,
         on_delete=models.CASCADE,
         verbose_name='Пользователь',
         blank=True,

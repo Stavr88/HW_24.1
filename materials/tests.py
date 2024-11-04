@@ -2,7 +2,7 @@ from django.urls import reverse
 from rest_framework import status
 from rest_framework.test import APITestCase
 
-from materials.models import Lesson, Course, Subscription
+from materials.models import *
 from users.models import User
 
 
@@ -19,10 +19,12 @@ class CourseTestCase(APITestCase):
         response = self.client.get(url)
         data = response.json()
         self.assertEqual(
-            response.status_code, status.HTTP_200_OK
+            response.status_code,
+            status.HTTP_200_OK
         )
         self.assertEqual(
-            data.get('title'), self.course.title
+            data.get('title'),
+            self.course.title
         )
 
     def test_course_create(self):
@@ -163,7 +165,7 @@ class LessonTestCase(APITestCase):
     def test_lesson_list(self):
         url = reverse('materials:lesson_list')
         response = self.client.get(url)
-        # print(response.json())
+        print(response.json())
         data = response.json()
         result = {
             "count": 1,

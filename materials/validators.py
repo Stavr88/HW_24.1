@@ -11,7 +11,7 @@ class ValidatorLink():
             "youtube.com",
             "rutube.com"
         ]
-        if video_url.get("url_video"):
+        if video_url.get("video_url"):
             for v_u in url:
                 if v_u not in video_url.get("video_url"):
                     raise ValidationError("Не верно указан сайт")

@@ -86,7 +86,6 @@ class SubscriptionCreateApiView(ListAPIView):
             subs_item.delete()  # Удаляем подписку
             message = 'подписка удалена'
         else:
-            Subscription.objects.create(user=user, course=course_item, sign_of_subscription=True)  # Создаем подписку
+            Subscription.objects.create(user=user, course=course_item, status_of_subscription=True)  # Создаем подписку
             message = 'подписка добавлена'
         return Response({"message": message})
-

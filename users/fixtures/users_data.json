@@ -1,0 +1,65 @@
+[
+  {
+    "model": "users.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$Z5gxf93aQ8YOrmYv9EqlOF$Llum6UZhXigxj6XZM9cVwoP0rQv/9N4pML+GN56INoc=",
+      "last_login": null,
+      "is_superuser": false,
+      "first_name": "",
+      "last_name": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-11-11T20:19:23.748Z",
+      "email": "test@mail.ru",
+      "phone": null,
+      "avatar": "",
+      "country": null,
+      "token": null,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.payments",
+    "pk": 1,
+    "fields": {
+      "user": 1,
+      "payment_time": "2024-11-11T20:30:47.833Z",
+      "payment_course": null,
+      "payment_lesson": null,
+      "price": 100,
+      "payment_method": "cash",
+      "session_id": null,
+      "link": null
+    }
+  },
+  {
+    "model": "users.payments",
+    "pk": 2,
+    "fields": {
+      "user": 1,
+      "payment_time": "2024-11-11T20:31:31.786Z",
+      "payment_course": null,
+      "payment_lesson": null,
+      "price": 100,
+      "payment_method": "cash",
+      "session_id": null,
+      "link": null
+    }
+  },
+  {
+    "model": "users.payments",
+    "pk": 3,
+    "fields": {
+      "user": 1,
+      "payment_time": "2024-11-11T20:33:30.983Z",
+      "payment_course": null,
+      "payment_lesson": null,
+      "price": 100,
+      "payment_method": "cash",
+      "session_id": "cs_test_a1xKyPoIyOCjM7K5yFJrXZcTTKmdblDEmGYhOkAApHm96caRUgT9AkMzfd",
+      "link": "https://checkout.stripe.com/c/pay/cs_test_a1xKyPoIyOCjM7K5yFJrXZcTTKmdblDEmGYhOkAApHm96caRUgT9AkMzfd#fidkdWxOYHwnPyd1blpxYHZxWjA0VE42RzZEQTR%2Fakl%2FY1I0SE5MRGRjf21wTlxjZlFuNHEyc2BnYFJJdT12T39XfFdsdTN0XWRVcFNBSGh8Sldgbml3fTZ8bVNBZnc8RHxIM2p%2FfGhjNGhQNTVVYGFHSjFITicpJ2N3amhWYHdzYHcnP3F3cGApJ2lkfGpwcVF8dWAnPyd2bGtiaWBabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl"
+    }
+  }
+]

@@ -24,6 +24,7 @@ urlpatterns = [
     path('delete/<int:pk>/', UserDeleteAPIView.as_view(), name='user_delete'),
     path('token/', TokenObtainPairView.as_view(permission_classes=(AllowAny,)), name='token_obtain_pair'),
     path('token/refresh/', TokenRefreshView.as_view(permission_classes=(AllowAny,)), name='token_refresh'),
+    path('payment/', PaymentCreateAPIView.as_view(), name='payment'),
 ]
 
 urlpatterns += router.urls

@@ -1,3 +1,5 @@
+from datetime import datetime
+
 from django.contrib.auth.models import AbstractUser
 from django.db import models
 
@@ -29,7 +31,16 @@ class User(AbstractUser):
         null=True,
     )
     token = models.CharField(
-        max_length=100, verbose_name="Тоken", null=True, blank=True
+        max_length=100,
+        verbose_name="Тоken",
+        null=True,
+        blank=True
+    )
+    last_login = models.DateTimeField(
+        default=datetime.now,
+        verbose_name="Время последнего посещения",
+        null=True,
+        blank=True
     )
 
     USERNAME_FIELD = "email"

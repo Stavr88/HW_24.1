@@ -8,7 +8,7 @@ from materials.models import Course, Lesson, Subscription
 from materials.paginators import CustomPagination
 from materials.serializers import CourseSerializer, LessonSerializer, SubscriptionSerializer, CourseDetailSerializer
 from users.permission import IsModerator, IsOwner
-
+from materials.tasks import course_update
 
 
 class CourseViewSet(ModelViewSet):
@@ -33,6 +33,11 @@ class CourseViewSet(ModelViewSet):
         if self.action == 'destroy':
             self.permission_classes = (~IsModerator | IsOwner,)
         return super().get_permissions()
+
+    def course_update(self, serializer):
+        instance = serializer.save()
+        course_update.delay(instance.pk)
+        return instance
 
 
 class LessonCreateApiView(CreateAPIView):
